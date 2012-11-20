@@ -1,6 +1,10 @@
 *.gem
 *.bundle
+mkmf.log
+libsnappy_ext.a
 /Gemfile.lock
 /tmp
 /bin/
 /vendor/gems
+/ext/ohsnap/dst
+/ext/ohsnap/src/snappy-*
