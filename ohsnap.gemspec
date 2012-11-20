@@ -20,4 +20,5 @@ Gem::Specification.new do |gem|
 
   # tests
   gem.add_development_dependency 'rake-compiler', ">= 0.8.1"
+  gem.add_development_dependency 'minitest', ">= 4.3.0"
 end

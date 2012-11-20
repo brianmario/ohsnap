@@ -45,7 +45,10 @@ unless have_library 'snappy_ext' and have_header 'snappy-c.h'
   exit(1)
 end
 
-CONFIG['LDSHARED'] = CONFIG['LDSHAREDXX']
+segments = CONFIG['LDSHARED'].split(' ')
+segments[0] = "$(CXX)"
+CONFIG['LDSHARED'] = segments.join(' ')
+
 $CFLAGS << ' -Wall'
 $CFLAGS << ' -Wextra -O0 -ggdb3' if ENV['DEBUG']
 
