@@ -9,6 +9,8 @@ static VALUE rb_mOhsnap_compress(VALUE self, VALUE rb_data) {
 	size_t data_len;
 	VALUE rb_out;
 
+	Check_Type(rb_data, T_STRING);
+
 	rb_out   = Qnil;
 	data     = RSTRING_PTR(rb_data);
 	data_len = RSTRING_LEN(rb_data);
@@ -36,6 +38,8 @@ static VALUE rb_mOhsnap_decompress(VALUE self, VALUE rb_compressed_data) {
 	char *out;
 	size_t out_len=0;
 	VALUE rb_out;
+
+	Check_Type(rb_compressed_data, T_STRING);
 
 	rb_out              = Qnil;
 	compressed_data     = RSTRING_PTR(rb_compressed_data);
