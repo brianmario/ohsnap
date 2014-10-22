@@ -2,7 +2,7 @@ require File.expand_path('../test_helper', __FILE__)
 
 require 'ohsnap'
 
-class OhsnapTest < MiniTest::Unit::TestCase
+class OhsnapTest < MiniTest::Test
   TEXT = "a"*1024*1024
 
   def test_compression
