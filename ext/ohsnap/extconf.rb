@@ -16,7 +16,7 @@ if `which make`.strip.empty?
   exit(1)
 end
 
-snappy_ver = "snappy-1.0.5"
+snappy_ver = "snappy-1.1.2"
 src = File.basename("#{snappy_ver}.tar.gz")
 dir = File.basename(src, '.tar.gz')
 
